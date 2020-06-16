@@ -137,7 +137,6 @@ function operate() {
     }
     answer = parseFloat(evaluating[0]).toFixed(5); //round it (to fix long decimals and bad math)
     answer = parseFloat(answer).toString(); //fixes trailing zeros
-    console.log(answer === Infinity);
     if (answer === 'Infinity' || answer === '-Infinity' || answer === 'NaN') {
         error();
         answer = 'Division Error!';

@@ -170,6 +170,7 @@ span{
 }
 
 .btn{
+    text-align: center;
     height: 17%;
     border-radius: 20px;
     border-style: none;

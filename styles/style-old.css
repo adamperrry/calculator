@@ -14,24 +14,16 @@
 /* font-family: 'Noto Sans JP', sans-serif; */
 
 *, *::before, *::after {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.95),rgba(218, 218, 218, 0.95)), url('../images/background.jpg');
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.95)),to(rgba(218, 218, 218, 0.95))), url('../images/background.jpg');
+    box-sizing: border-box;
     background-image: linear-gradient(rgba(255, 255, 255, 0.95),rgba(218, 218, 218, 0.95)), url('../images/background.jpg');
     background-repeat: repeat;
     height: 100vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 body{
@@ -39,16 +31,11 @@ body{
 }
 
 .calculator, .buttons, .column, .footer, html, .display-text, a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .calculator, .column, .display-text{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 
 .calculator {
@@ -56,27 +43,7 @@ body{
     width: 415px;
     border-radius: 35px;
     /* box-shadow: 30px 25px 35px -10px rgb(73, 228, 255); */
-    -webkit-box-shadow: 
-    0.5px 0.5px 0 var(--shadow1),
-    1px 1px 0 var(--shadow1),
-    1.5px 1.5px 0 var(--shadow1),
-    2px 2px 0 var(--shadow1),
-    2.5px 2.5px 0 var(--shadow1), 
-    3px 3px 0 var(--shadow1), 
-    3.5px 3.5px 0 var(--shadow1), 
-    4px 4px 0 var(--shadow1), 
-    3px 3px 0 var(--shadow1), 
-    5px 5px 0 var(--shadow1), 
-    5.5px 5.5px 0 var(--shadow1),
-    6px 6px 0 var(--shadow1), 
-    6.5px 6.5px 0 var(--shadow1), 
-    7px 7px 0 var(--shadow1), 
-    7.5px 7.5px 0 var(--shadow1),
-    8px 8px 0 var(--shadow1), 
-    8.5px 8.5px 0 var(--shadow1),
-    9px 9px 0 var(--shadow1), 
-    9.5px 9.5px 0 var(--shadow1);
-            box-shadow: 
+    box-shadow: 
     0.5px 0.5px 0 var(--shadow1),
     1px 1px 0 var(--shadow1),
     1.5px 1.5px 0 var(--shadow1),
@@ -101,12 +68,8 @@ body{
 .footer {
     margin-top: 5px;
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
 }
 
@@ -124,12 +87,8 @@ img{
 }
 
 .display-text{
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
     min-height: 100%;
     width: 100%;
 }
@@ -158,9 +117,7 @@ span{
 }
 
 .buttons {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin: 6% 9% 7.5% 9%;
     height: 380px;
     -webkit-user-select: none;
@@ -175,18 +132,12 @@ span{
     border-style: none;
     font-size: 30px;
     background-color: var(--numbers);
-    -webkit-transition: border .08s, background-color .3s cubic-bezier(0,1.2,.76,.86), -webkit-transform .04s;
-    transition: border .08s, background-color .3s cubic-bezier(0,1.2,.76,.86), -webkit-transform .04s;
-    -o-transition: border .08s, transform .04s, background-color .3s cubic-bezier(0,1.2,.76,.86);
     transition: border .08s, transform .04s, background-color .3s cubic-bezier(0,1.2,.76,.86);
-    transition: border .08s, transform .04s, background-color .3s cubic-bezier(0,1.2,.76,.86), -webkit-transform .04s;
     cursor: pointer;
 }
 
 .btn-error{
-    -webkit-transform: scale(.95);
-        -ms-transform: scale(.95);
-            transform: scale(.95);
+    transform: scale(.95);
     background-color: var(--error) !important;
 }
 
@@ -221,23 +172,16 @@ span{
 }
 
 .btn:active,.btn-active{
-    -webkit-transform: scale(.91);
-        -ms-transform: scale(.91);
-            transform: scale(.91);
+    transform: scale(.91);
 }
 
 .btn:focus{
     outline: none;
 }
 
-.btn::-moz-focus-inner {
-    border: 0;
-  }
-
 .column{
     width: 22.5%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
 }
 
 .display-text, .btn, .footer{
